@@ -1,0 +1,48 @@
+<mockup version="1.0" skin="wireframe" fontFace="Balsamiq Sans" measuredW="1016" measuredH="394" mockupW="970" mockupH="359">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::Canvas" x="82" y="80" w="-1" h="-1" measuredW="100" measuredH="70" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <markup>true</markup>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Image" x="125" y="143" w="393" h="250" measuredW="788" measuredH="500" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>form1%26bm%3Bform1.bmml%26bm%3Bform1.bmml%26bm%3Bform1.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2279%2C108%2C472%2C358%22%20href%3D%22form1.bmml%22%20alt%3D%22form1%22%20id%3D%223%22/%3E</map>
+        <src>../../../../../../../Documents/doTerra/doTERRA-Mom.jpg</src>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Label" x="46" y="35" w="-1" h="-1" measuredW="386" measuredH="27" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>6713367</color>
+        <size>20</size>
+        <text>Welcome%20to%20Pam%27s%20doTerra%20Invitation%20Maker</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Label" x="952" y="37" w="-1" h="-1" measuredW="63" measuredH="23" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>6713367</color>
+        <size>16</size>
+        <text>Samples</text>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Image" x="582" y="143" w="434" h="251" measuredW="2100" measuredH="1206" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <borderStyle>square</borderStyle>
+        <href>form2%26bm%3Bform2.bmml%26bm%3Bform2.bmml%26bm%3Bform2.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22536%2C108%2C970%2C359%22%20href%3D%22form2.bmml%22%20alt%3D%22form2%22%20id%3D%227%22/%3E</map>
+        <size>14</size>
+        <src>../../../../../../../Documents/doTerra/Pams-doTERRA-BC-Front.jpg</src>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Label" x="46" y="80" w="257" h="-1" measuredW="241" measuredH="23" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>6770343</color>
+        <size>16</size>
+        <text>Choose%20a%20sample%20invitation%20to%20edit</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

@@ -1,0 +1,25 @@
+Create wireframe of app - DONE
+ * Design UX from page to page - DONE
+   - Form entry page for each sample (has a save button) - DONE
+   - Final page with form data filled in (has an edit & publish button) - DONE
+     - The final page actually has the form, just the borders are gone. - DONE
+   - Add the leading sample page once the samples are created - DONE
+Get flask directory stucture setup
+ * Create each mock page, with basic workflow working
+ * Implement routes.py
+ * Implement form templates w/ CSS
+   * layout.html - contains header and form shells
+     + header.html - implement the header (extends layout.html)
+     + create doterra page (img files) with a IPC form
+Add client-side javascript
+ * Info button in popup
+Implement the "save" button in the form page
+ * Show doterra sample w/out the form (final presentation page)
+Implement the "edit" button in the final page
+ * Go back to the form page, with the form data filled in
+ * Let user edit form, and then save again
+Implement the "publish" button
+ * Grab the doterra sample from the screen into an image
+ * Emails the final page to the user
+   - Look at Flask Mega-Tutorial lesson called "Email Support" and use Flask-Mail
+
