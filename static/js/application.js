@@ -34,6 +34,8 @@ $(document).ready(function() {
 		showInfoDialog();
 	});
 
+    //destroyLessCache('/static/css');
+
 	// jQuery UI code for tooltips
 	//$(document).tooltip();
 });

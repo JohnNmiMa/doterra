@@ -7,21 +7,23 @@
 //
 //## Gray and brand colors for use across Bootstrap.
 
+// John's custom doterra colors
+@doterra-primary-color:   #9b82c1;
+@doterra-secondary-color: #7eb348;
+@doterra-primary-hover-color:      darken(@doterra-primary-color, 7%);
+@doterra-secondary-hover-color:    darken(@doterra-secondary-color, 7%);
+
 @gray-darker:            lighten(#000, 13.5%); // #222
 @gray-dark:              lighten(#000, 20%);   // #333
 @gray:                   lighten(#000, 33.5%); // #555
 @gray-light:             lighten(#000, 60%);   // #999
 @gray-lighter:           lighten(#000, 93.5%); // #eee
 
-//@brand-primary:         #428bca;
-@brand-primary:         #b19662;
+@brand-primary:         #428bca;
 @brand-success:         #5cb85c;
 @brand-info:            #5bc0de;
 @brand-warning:         #f0ad4e;
 @brand-danger:          #d9534f;
-
-// John's less color variables
-@brand-secondary:       #4d917c;
 
 //== Scaffolding
 //
@@ -75,8 +77,7 @@
 //
 //## Specify custom locations of the include Glyphicons icon font. Useful for those including Bootstrap via Bower.
 
-//@icon-font-path:          "../fonts/";
-@icon-font-path:          "./static/fonts/";
+@icon-font-path:          "../fonts/";
 @icon-font-name:          "glyphicons-halflings-regular";
 @icon-font-svg-id:        "glyphicons_halflingsregular";
 
@@ -337,15 +338,25 @@
 @navbar-padding-vertical:          ((@navbar-height - @line-height-computed) / 2);
 @navbar-collapse-max-height:       340px;
 
-@navbar-default-color:             #777;
-@navbar-default-bg:                #f8f8f8;
-@navbar-default-border:            darken(@navbar-default-bg, 6.5%);
+@doterra-primary-color:   #9b82c1;
+@doterra-secondary-color: #7eb348;
+@doterra-primary-hover-color:      darken(@doterra-primary-color, 7%);
+@doterra-secondary-hover-color:    darken(@doterra-secondary-color, 7%);
+
+//@navbar-default-color:             #777;
+@navbar-default-color:             @doterra-secondary-color;
+//@navbar-default-bg:                #f8f8f8;
+@navbar-default-bg:                @doterra-primary-color;
+@navbar-default-border:            darken(#f8f8f8, 6.5%);
 
 // Navbar links
-@navbar-default-link-color:                #777;
-@navbar-default-link-hover-color:          #333;
+//@navbar-default-link-color:                #777;
+//@navbar-default-link-hover-color:          #333;
+@navbar-default-link-color:                @doterra-secondary-color;
+@navbar-default-link-hover-color:          @doterra-primary-color;
 @navbar-default-link-hover-bg:             transparent;
-@navbar-default-link-active-color:         #555;
+//@navbar-default-link-active-color:         #555;
+@navbar-default-link-active-color:         darken(@navbar-default-color, 6.5%);
 @navbar-default-link-active-bg:            darken(@navbar-default-bg, 6.5%);
 @navbar-default-link-disabled-color:       #ccc;
 @navbar-default-link-disabled-bg:          transparent;

@@ -1,0 +1,75 @@
+// The custom doTerra colors are in the variables.less file
+@import "../less/variables.less";
+@import "../less/mixins.less";
+
+body { padding-bottom: 70px; }
+
+/* One way to customize bootstrap buttons */
+.btn-doterra {
+    .button-variant(#fff; @doterra-primary-color; #fff);
+}
+
+/* Another way to customize bootstrap buttons */
+.btn-doterra2 {
+	background: @doterra-primary-color;
+	background-image: none;
+	border:none;
+	color: #fff;
+	letter-spacing: 1px;
+	transition: all 0.3s ease-in-out 0s;		
+	-webkit-transition: all 0.3s ease-in-out 0s;		
+}
+.btn-doterra2:hover {
+	background: @doterra-primary-hover-color;
+	color: #fff;
+}
+
+.navbar-text {
+    color: @doterra-secondary-color;
+}
+
+/*
+ *Setup VEX popup styling
+ */
+
+.vex-content.infoDialog {
+	font-weight:300 !important;
+	width:600px !important;
+    background-color: @doterra-secondary-color !important;
+    color:#fff !important;;
+}
+
+.vex-content.infoDialog ul.instructions, .vex-content.infoDialog ul.attributions {
+	margin-left:10px !important;
+	padding-left:10px !important;
+	list-style: disc !important;
+}
+
+.vex-content.validateDialog {
+	width:400px !important;
+    background-color:#dedfe0 !important;
+	font-weight:500 !important;
+	font-size:0.85em !important;
+}
+
+.vex-overlay.validateDialogOverlay {
+	background:none !important;
+}
+
+#footer .glyphicon {
+    font-size:1.5em;
+}
+
+.choose {
+    padding-left:15px;
+    color: @doterra-primary-color;
+}
+
+#invite1, #invite2 {
+    width:100%;
+}
+
+/* Used to style the jQuery tooptip */
+.ui-tooltip {
+	font-size:9px;
+}

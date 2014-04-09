@@ -12,3 +12,5 @@
 *.js~
 
 *.less~
+
+static/less/t~
