@@ -3,8 +3,8 @@
 {% block content %}
     <div class="col-md-12">
         <div class="btn-group btn-group-lg">
-            <a href="{{url_for('publish_invite')}}" class="btn btn-doterra" role="button">Save</a>
+            <a href="{{url_for('publish_invitation', invitation=invitation)}}" class="btn btn-doterra" role="button">Save</a>
         </div>
-        <img id="invite1" src="static/img/Invite1.jpg">
+        <img id="invitation" src="/static/img/{{invitation}}.jpg">
     </div>
 {% endblock %}

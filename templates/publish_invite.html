@@ -3,7 +3,7 @@
 {% block content %}
     <div class="col-md-12">
         <a href="#" class="btn btn-doterra btn-lg" role="button">Publish</a>
-        <a href="{{url_for('edit_invite')}}" class="btn btn-doterra btn-lg" role="button">Edit</a>
-        <img id="invite1" src="static/img/Invite1.jpg">
+        <a href="{{url_for('edit_invitation', invitation=invitation)}}" class="btn btn-doterra btn-lg" role="button">Edit</a>
+        <img id="invitation" src="/static/img/{{invitation}}.jpg">
     </div>
 {% endblock %}

@@ -8,9 +8,11 @@ Get flask directory stucture setup - DONE
  * Create each mock page, with basic workflow working - DONE
  * Implement routes.py - DONE
  * Implement form templates w/ CSS
-   * layout.html - contains header and form shells
-     + header.html - implement the header (extends layout.html)
-     + create doterra page (img files) with a IPC form
+   * layout.html - contains header and form shells - DONE
+     + header.html - implement the header (extends layout.html) - DONE
+     + create edit_invite page (img files) with a IPC form
+       - pass in correct image file to be edited
+       - create form for page
 Add client-side javascript - DONE
  * Info button in popup - DONE
 Implement the "save" button in the form page - DONE
