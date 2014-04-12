@@ -1,0 +1,55 @@
+<div id="invite1FormContainer">
+    <form id="invitationForm" action="{{url_for('publish_invitation', invitation=invitation)}}" method="post" name="invitationForm" role="form">
+        {% if border == 'noborder' %}
+            {% set ifdisabled = 'disabled' %}
+        {% endif %}
+
+        {% if formdata %}
+            {% if formdata['date'] %}
+                {% set datevalue = formdata['date'] %}
+            {% endif %}
+
+            {% if formdata['time'] %}
+                {% set timevalue = formdata['time'] %}
+            {% endif %}
+
+            {% if formdata['address'] %}
+                {% set addressvalue = formdata['address'] %}
+            {% endif %}
+
+            {% if formdata['citystatezip'] %}
+                {% set citystatezipvalue = formdata['citystatezip'] %}
+            {% endif %}
+
+            {% if formdata['phone'] %}
+                {% set phonevalue = formdata['phone'] %}
+            {% endif %}
+
+            {% if formdata['email'] %}
+                {% set emailvalue = formdata['email'] %}
+            {% endif %}
+        {% else %}
+            {% set datephvalue = 'Class date' %}
+            {% set timephvalue = 'Class time' %}
+            {% set addressphvalue = 'Address' %}
+            {% set citystatezipphvalue = 'City, State  Zip' %}
+            {% set phonephvalue = 'Phone #' %}
+            {% set emailphvalue = 'Email' %}
+        {% endif %}
+
+        <fieldset {{ifdisabled}}>
+            <input type="text" name='date' value='{{datevalue}}'
+                class="form-control dateinput {{invitation}} {{border}}" placeholder='{{datephvalue}}'>
+            <input type="text" name='time' value='{{timevalue}}'
+                class="form-control timeinput {{invitation}} {{border}}" placeholder='{{timephvalue}}'>
+            <input type="text" name='address' value='{{addressvalue}}'
+                class="form-control addressinput {{invitation}} {{border}}" placeholder='{{addressphvalue}}'>
+            <input type="text" name='citystatezip' value='{{citystatezipvalue}}'
+                class="form-control citystatezipinput {{invitation}} {{border}}" placeholder='{{citystatezipphvalue}}'>
+            <input type="tel" name='phone' value='{{phonevalue}}'
+                class="form-control phoneinput {{invitation}} {{border}}" placeholder='{{phonephvalue}}'>
+            <input type="email" name='email' value='{{emailvalue}}'
+                class="form-control emailinput {{invitation}} {{border}}" placeholder='{{emailphvalue}}'>
+        </fieldset>
+    </form>
+</div>

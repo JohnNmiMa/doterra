@@ -3,8 +3,18 @@
 {% block content %}
     <div class="col-md-12">
         <div class="btn-group btn-group-lg">
-            <a href="{{url_for('publish_invitation', invitation=invitation)}}" class="btn btn-doterra" role="button">Save</a>
+            <button type="submit" class="btn btn-doterra btn-large" name="savebutton" form="invitationForm">Save</button>
+        </div><br>
+
+        <div id="invitationContainer">
+            {% block invitationForm %}
+            {% endblock %}
+
+            {% if invitation == '???' %} // some jpg picture
+                <img id={{invitation}} src="/static/img/{{invitation}}.jpg">
+            {% else %}
+                <img id={{invitation}} src="/static/img/{{invitation}}.png">
+            {% endif %}
         </div>
-        <img id="invitation" src="/static/img/{{invitation}}.jpg">
     </div>
 {% endblock %}

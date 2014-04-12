@@ -10,9 +10,13 @@ Get flask directory stucture setup - DONE
  * Implement form templates w/ CSS
    * layout.html - contains header and form shells - DONE
      + header.html - implement the header (extends layout.html) - DONE
-     + create edit_invite page (img files) with a IPC form
-       - pass in correct image file to be edited
-       - create form for page
+     + create edit_invite page (img files) with free from text input area
+       - pass in correct image file to be edited - DONE
+       - get javascript editor (tinymice)
+         - install it
+         - get it running in a div
+         - get font style (color, font) set
+         - try to get so the font size will scale as the page gets bigger or smaller
 Add client-side javascript - DONE
  * Info button in popup - DONE
 Implement the "save" button in the form page - DONE

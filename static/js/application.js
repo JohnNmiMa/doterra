@@ -34,7 +34,29 @@ $(document).ready(function() {
 		showInfoDialog();
 	});
 
-    //destroyLessCache('/static/css');
+    // Dynamisches Skalieren von Schriften
+    fontSize = function() {
+        //ww = $(window).innerWidth();
+        ww = $('#formContainer').innerWidth(); // Width of the Motherelement
+        console.log("formContainer innerWidth = " + ww);
+        one = ww/100; // 1%
+        console.log("one = " + one);
+        multiplcator = one*31; 
+        console.log("font size = " + multiplcator);
+        $('.mainhead').css({'font-size': multiplcator+'px'});
+    }
+    fontSize();
+
+    $(".dateinput").datepicker({
+        format: "DD, MM d",
+        todayBtn: "linked"
+    });
+
+    $(".timeinput").timepicker({
+        minuteStep: 5,
+        showInputs: false,
+        disableFocus: true
+    });
 
 	// jQuery UI code for tooltips
 	//$(document).tooltip();

@@ -7,13 +7,6 @@ from form import InviteForm
 app = Flask(__name__)      
 app.config.from_object('config')
 
-def flash_errors(form):
-    """ Flashes form errors"""
-    for field, errors in form.errors.items():
-        for error in errors:
-            flash(u'<td><span>%s</span> field</td><td>%s</td>' % \
-                    (getattr(form, field).label.text, error.lower()), 'error')
-
 @app.route('/', methods = ['GET', 'POST'])
 @app.route('/index', methods = ['GET', 'POST'])
 def index():
@@ -21,31 +14,12 @@ def index():
 
 @app.route('/edit_invite/<path:invitation>', methods = ['GET', 'POST'])
 def edit_invitation(invitation):
-    # Read in the WTForm
-    form = InviteForm()
-
-    # If the form has already been presented to the user, and it has valid
-    # data, then save the form data (just pickle it) and go to the publish_invitation page.
-    if form.validate_on_submit():
-        return redirect(url_for('publish_invitation', invitation=invitation, form=form))
-
-    with open('formdata', 'w') as formfile:
-        pickle.dump(form, formfile)
-
-    flash_errors(form)
-
-    # Well, either the form had incorrect data, or we need to make an
-    # initial presentation of the form to the user
-    #pdb.set_trace()
-    return render_template('edit_invite.html', invitation=invitation, form=form)
+    return render_template('edit_'+invitation+'.html', invitation=invitation, border='border')
 
 @app.route('/publish_invite/<path:invitation>', methods = ['GET', 'POST'])
 def publish_invitation(invitation):
-    # Get the form data (just unpickle it) and render the publish_invite page
-    with open('formdata', 'r') as formfile:
-        form = pickle.load(formfile)
-        #pdb.set_trace()
-        return render_template('publish_invite.html', invitation=invitation, form=form)
+    #pdb.set_trace()
+    return render_template('publish_'+invitation+'.html', invitation=invitation, border='noborder', formdata=request.form)
 
  
 if __name__ == '__main__':

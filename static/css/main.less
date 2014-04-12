@@ -7,6 +7,7 @@ body { padding-bottom: 70px; }
 /* One way to customize bootstrap buttons */
 .btn-doterra {
     .button-variant(#fff; @doterra-primary-color; #fff);
+    width:95px;
 }
 
 /* Another way to customize bootstrap buttons */
@@ -65,10 +66,32 @@ body { padding-bottom: 70px; }
     color: @doterra-primary-color;
 }
 
+// General Invitation CSS
 #invitation {
     width:100%;
     padding: 15px 0;
 }
+
+#invitationContainer {
+    position: relative;
+    //border:1px solid black;
+}
+
+.invitationLable {
+    text-align:center;
+    color: @doterra-primary-color;
+}
+
+#invitationForm input {
+    background: transparent;
+}
+#invitationForm input.noborder {
+    border:none;
+    box-shadow: none;
+}
+
+// Invitation-A CSS
+@import "invite1.less";
 
 /* Used to style the jQuery tooptip */
 .ui-tooltip {

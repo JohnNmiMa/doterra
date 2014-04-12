@@ -1,13 +1,26 @@
 {% extends "layout.html" %}
 
 {% block content %}
-    <h4 class="choose">Choose a sample invitation to edit</h4>
+    <h4 class="choose">Choose a sample invitation or business card to edit</h4>
+
+    <!-- Column 1 -->
     <div class="col-md-4">
-        <a href="{{ url_for('edit_invitation', invitation='invite1') }}"><img id="invitation" src="static/img/invite1.jpg"></a>
+        <h6 class='invitationLable'>Invitation A</h6>
+        <a href="{{ url_for('edit_invitation', invitation='invite1') }}"><img id="invitation" src="static/img/invite1.png"></a>
+
+        <h6 class='invitationLable'>Business Card A - Back</h6>
+        <a href="{{ url_for('edit_invitation', invitation='buscard-a-front') }}"><img id="invitation" src="static/img/buscard1-back.png"></a>
     </div>
+
+    <!-- Column 2 -->
     <div class="col-md-4">
-        <a href="{{ url_for('edit_invitation', invitation='invite2') }}"><img id="invitation" src="static/img/invite2.jpg"></a>
+        <h6 class='invitationLable'>Invitation B</h6>
+        <a href="{{ url_for('edit_invitation', invitation='invite2') }}"><img id="invitation" src="static/img/invite2.png"></a>
     </div>
+
+    <!-- Column 3 -->
     <div class="col-md-4">
+        <h6 class='invitationLable'>Business Card A - Front</h6>
+        <a href="{{ url_for('edit_invitation', invitation='buscard-a-front') }}"><img id="invitation" src="static/img/buscard1-front.png"></a>
     </div>
 {% endblock %}
