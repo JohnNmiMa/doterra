@@ -14,12 +14,16 @@ def index():
 
 @app.route('/edit_invite/<path:invitation>', methods = ['GET', 'POST'])
 def edit_invitation(invitation):
-    return render_template('edit_'+invitation+'.html', invitation=invitation, border='border')
+    path = request.path.split('/')[1]
+    print('path = {}').format(path)
+    return render_template('edit_'+invitation+'.html', page=path, invitation=invitation, formdata=request.form)
 
 @app.route('/publish_invite/<path:invitation>', methods = ['GET', 'POST'])
 def publish_invitation(invitation):
     #pdb.set_trace()
-    return render_template('publish_'+invitation+'.html', invitation=invitation, border='noborder', formdata=request.form)
+    path = request.path.split('/')[1]
+    print('path = {}').format(path)
+    return render_template('publish_'+invitation+'.html',  page=path, invitation=invitation, formdata=request.form)
 
  
 if __name__ == '__main__':

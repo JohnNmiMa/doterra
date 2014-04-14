@@ -15,6 +15,14 @@
             {% else %}
                 <img id={{invitation}} src="/static/img/{{invitation}}.png">
             {% endif %}
+
+            <p>Formdata:</p>
+            <ul id='formdata'>
+                {% for entry in formdata %}
+                    <li>{{ entry + ": " + formdata[entry] }} </li>
+                {% endfor %}
+            </ul>
         </div>
+
     </div>
 {% endblock %}

@@ -1,3 +1,6 @@
+PHASE 1 - Basic invitation creation
+  * Does not include accounts (no login or signup)
+  * Does not include data (account/invitation) persistance
 Create wireframe of app - DONE
  * Design UX from page to page - DONE
    - Form entry page for each sample (has a save button) - DONE
@@ -12,20 +15,44 @@ Get flask directory stucture setup - DONE
      + header.html - implement the header (extends layout.html) - DONE
      + create edit_invite page (img files) with free from text input area
        - pass in correct image file to be edited - DONE
-       - get javascript editor (tinymice)
-         - install it
-         - get it running in a div
-         - get font style (color, font) set
-         - try to get so the font size will scale as the page gets bigger or smaller
+       - create invitation form - DONE
+     + create publish_invite page - DONE
+       - get form data from the edit_invite page into the publish_invite page - DONE
+       - get edit button working, such that data is pushed back to edit_invite page - DONE
 Add client-side javascript - DONE
  * Info button in popup - DONE
 Implement the "save" button in the form page - DONE
  * Show doterra sample w/out the form (final presentation page)
 Implement the "edit" button in the final page - DONE
- * Go back to the form page, with the form data filled in
- * Let user edit form, and then save again
+ * Go back to the form page, with the form data filled in - DONE
+ * Let user edit form, and then save again - DONE
 Implement the "publish" button - DONE
  * Grab the doterra sample from the screen into an image
- * Emails the final page to the user
+ * Emails the final page to the user (from javascript on the client, not the server)
    - Look at Flask Mega-Tutorial lesson called "Email Support" and use Flask-Mail
+
+### Show Charlie, and see if I should go ahead and make this my MVP project.
+  - if not, then get started on the code snippet project.
+  - come back later and implement PHASE 2 for Pam
+
+PHASE 2 - Accounts and data persistance
+Create wireframe showing initial page, signup/login process
+Create signup page
+  * create signup form
+  * persist user account
+    - when data is added, automatically log them in
+    - if account already exists, just say so in signup form
+    - be able to send hashed password
+Create "account" page
+  * create account form
+  * allow account info to be changed
+Create login page
+  * create login form
+  * get user data from database, and compare passwords, and if they compare, log them in
+  * if they don't exist, just say so in signup form
+  * add "forgot password" link
+    - create "forgot password" popup and send link to change account password
+
+PHASE 3
+  * be able to use Flask-WTF forms, which are more secure
 

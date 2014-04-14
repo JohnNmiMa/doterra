@@ -1,5 +1,7 @@
 {% extends "edit_invite.html" %}
 
 {% block invitationForm %}
-    {% include invitation + ".html" %}
+    <form id="invitationForm" action="{{url_for('publish_invitation', invitation=invitation)}}" method="post" name="invitationForm" role="form">
+        {% include invitation + ".html" %}
+    </form>
 {% endblock %}

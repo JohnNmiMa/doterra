@@ -2,9 +2,10 @@
 
 {% block content %}
     <div class="col-md-12">
-        <a href="#" class="btn btn-doterra btn-lg" role="button">Publish</a>
-        <a href="{{url_for('edit_invitation', invitation=invitation)}}" class="btn btn-doterra btn-lg" role="button">Edit</a>
-        <br>
+        <div class="btn-group btn-group-lg">
+            <button type="button" class="btn btn-doterra btn-large" name="publishbutton">Publish</button>
+            <button type="submit" class="btn btn-doterra btn-large" name="editbutton" form="invitationForm">Edit</button>
+        </div><br>
 
         <div id="invitationContainer">
             {% block invitationForm %}
@@ -15,6 +16,13 @@
             {% else %}
                 <img id={{invitation}} src="/static/img/{{invitation}}.png">
             {% endif %}
+
+            <p>Formdata:</p>
+            <ul id='formdata'>
+                {% for entry in formdata %}
+                    <li>{{ entry + ": " + formdata[entry] }} </li>
+                {% endfor %}
+            </ul>
 
         </div>
     </div>
