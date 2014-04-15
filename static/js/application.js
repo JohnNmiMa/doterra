@@ -34,18 +34,6 @@ $(document).ready(function() {
 		showInfoDialog();
 	});
 
-    $("#publishbutton").click(function() {
-        var target = $('#invitationContainer');
-        html2canvas(target, {
-            onrendered: function(canvas) {
-                var data = canvas.toDataURL();
-                alert(data);
-                document.body.innerHTML="<br/><br/><br/><br/><br/><br/><img src="+data+" />";
-            }
-        });
-        console.log("The Publish button was clicked");
-    });
-
     $("input.date").datepicker({
         format: "DD, MM d",
         todayBtn: "linked"
