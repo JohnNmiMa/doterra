@@ -12,7 +12,7 @@ app.config.from_object('config')
 def index():
     return render_template('samples.html')
 
-@app.route('/edit_invite/<path:sample>', methods = ['GET', 'POST'])
+@app.route('/edit_sample/<path:sample>', methods = ['GET', 'POST'])
 def edit_sample(sample):
     path = request.path.split('/')[1]
     form = {}
@@ -26,7 +26,7 @@ def edit_sample(sample):
 
     return render_template('edit_'+sample+'.html', page=path, sample=sample, formdata=form)
 
-@app.route('/publish_invite/<path:sample>', methods = ['GET', 'POST'])
+@app.route('/publish_sample/<path:sample>', methods = ['GET', 'POST'])
 def publish_sample(sample):
     #pdb.set_trace()
     path = request.path.split('/')[1]
