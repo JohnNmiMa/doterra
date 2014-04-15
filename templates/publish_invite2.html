@@ -1,0 +1,7 @@
+{% extends "publish_invite.html" %}
+
+{% block invitationForm %}
+    <form id="invitationForm" action="{{url_for('edit_sample', sample=sample)}}" method="post" name="invitationForm" role="form">
+        {% include sample + ".html" %}
+    </form>
+{% endblock %}

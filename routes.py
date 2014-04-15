@@ -12,18 +12,26 @@ app.config.from_object('config')
 def index():
     return render_template('samples.html')
 
-@app.route('/edit_invite/<path:invitation>', methods = ['GET', 'POST'])
-def edit_invitation(invitation):
+@app.route('/edit_invite/<path:sample>', methods = ['GET', 'POST'])
+def edit_sample(sample):
     path = request.path.split('/')[1]
-    print('path = {}').format(path)
-    return render_template('edit_'+invitation+'.html', page=path, invitation=invitation, formdata=request.form)
+    form = {}
+    if (request.form):
+        form = request.form.to_dict()
 
-@app.route('/publish_invite/<path:invitation>', methods = ['GET', 'POST'])
-def publish_invitation(invitation):
+    #Remove spurrious cruft from form fields
+    if (('welladv' in form) and form['welladv'].find('Wellness') >= 0):
+        # Remote "Wellness Advocate" from the form['welladv'] field
+        form['welladv'] = form['welladv'].split('#')[1]
+
+    return render_template('edit_'+sample+'.html', page=path, sample=sample, formdata=form)
+
+@app.route('/publish_invite/<path:sample>', methods = ['GET', 'POST'])
+def publish_sample(sample):
     #pdb.set_trace()
     path = request.path.split('/')[1]
-    print('path = {}').format(path)
-    return render_template('publish_'+invitation+'.html',  page=path, invitation=invitation, formdata=request.form)
+    #print('path = {}').format(path)
+    return render_template('publish_'+sample+'.html',  page=path, sample=sample, formdata=request.form)
 
  
 if __name__ == '__main__':

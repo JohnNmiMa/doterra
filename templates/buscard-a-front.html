@@ -1,0 +1,63 @@
+<div id="busCardAFrontFormContainer">
+
+    {% if page == 'edit_invite' %}
+        {% set border = 'border' %}
+
+        {% set nameph = 'placeholder="Name"'|safe %}
+        {% set welladvph = 'placeholder="Wellness Advocate #"'|safe %}
+        {% set phoneph = 'placeholder="Phone #"'|safe %}
+        {% set urlph = 'placeholder="Web-site URL"'|safe %}
+        {% set emailph = 'placeholder="Email"'|safe %}
+    {% elif page == 'publish_invite' %}
+        {% set doreadonly = 'readonly' %}
+        {% set border = 'noborder' %}
+
+        {% set nameph = '' %}
+        {% set welladvph = '' %}
+        {% set phoneph = '' %}
+        {% set urlph = '' %}
+        {% set emailph = '' %}
+    {% endif %}
+
+    {% if formdata %}
+        {% if formdata['name'] %}
+            {% set namevalue = formdata['name'] %}
+        {% endif %}
+
+        {% if formdata['welladv'] %}
+            {% if page == 'edit_invite' %}
+                {% set welladvvalue = formdata['welladv'] %}
+            {% elif page == 'publish_invite' %}
+                {% set welladvvalue = 'Wellness Advocate #' + formdata['welladv'] %}
+            {% endif %}
+        {% endif %}
+
+        {% if formdata['phone'] %}
+            {% set phonevalue = formdata['phone'] %}
+        {% endif %}
+
+        {% if formdata['url'] %}
+            {% set urlvalue = formdata['url'] %}
+        {% endif %}
+
+        {% if formdata['email'] %}
+            {% set emailvalue = formdata['email'] %}
+        {% endif %}
+    {% endif %}
+
+
+    <fieldset {{ifdisabled}}>
+        <div class="row col-sm-12">
+            <input type="text" name='name' value='{{namevalue}}'
+                class="form-control input-lg name {{sample}} {{border}}" {{nameph}} {{doreadonly}}>
+            <input type="text" name='welladv' value='{{welladvvalue}}'
+                class="form-control  welladv {{sample}} {{border}}" {{welladvph}} {{doreadonly}}>
+            <input type="tel" name='phone' value='{{phonevalue}}'
+                class="form-control  phone {{sample}} {{border}}" {{phoneph}} {{doreadonly}}>
+            <input type="text" name='url' value='{{urlvalue}}'
+                class="form-control  url {{sample}} {{border}}" {{urlph}} {{doreadonly}}>
+            <input type="email" name='email' value='{{emailvalue}}'
+                class="form-control  email {{sample}} {{border}}" {{emailph}} {{doreadonly}}>
+        </div>
+    </fieldset>
+</div>

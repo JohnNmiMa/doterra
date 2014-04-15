@@ -10,18 +10,18 @@
             {% block invitationForm %}
             {% endblock %}
 
-            {% if invitation == '???' %} // some jpg picture
-                <img id={{invitation}} src="/static/img/{{invitation}}.jpg">
+            {% if sample == '???' %} // some jpg picture
+                <img id={{sample}} src="/static/img/{{sample}}.jpg">
             {% else %}
-                <img id={{invitation}} src="/static/img/{{invitation}}.png">
+                <img id={{sample}} src="/static/img/{{sample}}.png">
             {% endif %}
 
-            <p>Formdata:</p>
+            <!--p>Formdata:</p>
             <ul id='formdata'>
                 {% for entry in formdata %}
                     <li>{{ entry + ": " + formdata[entry] }} </li>
                 {% endfor %}
-            </ul>
+            </ul-->
         </div>
 
     </div>

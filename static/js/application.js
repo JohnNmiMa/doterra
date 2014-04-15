@@ -47,12 +47,12 @@ $(document).ready(function() {
     }
     fontSize();
 
-    $(".dateinput").datepicker({
+    $("input.date").datepicker({
         format: "DD, MM d",
         todayBtn: "linked"
     });
 
-    $(".timeinput").timepicker({
+    $("input.fromtime, input.totime").timepicker({
         minuteStep: 5,
         showInputs: false,
         disableFocus: true
