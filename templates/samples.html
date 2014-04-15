@@ -3,24 +3,41 @@
 {% block content %}
     <h4 class="choose">Choose a sample invitation or business card to edit</h4>
 
-    <!-- Column 1 -->
-    <div class="col-md-4">
-        <h6 class='invitationLable'>Invitation A</h6>
-        <a href="{{ url_for('edit_sample', sample='invite1') }}"><img id="invitation" src="static/img/invite1.png"></a>
+    <div class="row">
+        <!-- Column 1 -->
+        <div class="col-md-4">
+            <figure>
+                <figcaption class="invitationLable">Invitation A</figcaption>
+                <a href="{{ url_for('edit_sample', sample='invite1') }}"><img id="invitation" src="static/img/invite1.png"></a>
+            </figure>
+        </div>
 
-        <h6 class='invitationLable'>Business Card A - Back</h6>
-        <a href="{{ url_for('publish_sample', sample='buscard-a-back') }}"><img id="invitation" src="static/img/buscard-a-back.png"></a>
+        <!-- Column 2 -->
+        <div class="col-md-4">
+            <figure>
+                <figcaption class="invitationLable">Invitation B</figcaption>
+                <a href="{{ url_for('edit_sample', sample='invite2') }}"><img id="invitation" src="static/img/invite2.png"></a>
+            </figure>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="col-md-4">
+            <figure>
+                <figcaption class="invitationLable">Business Card A - Front</figcaption>
+                <a href="{{ url_for('edit_sample', sample='buscard-a-front') }}"><img id="invitation" src="static/img/buscard-a-front.png"></a>
+            </figure>
+        </div>
     </div>
 
-    <!-- Column 2 -->
-    <div class="col-md-4">
-        <h6 class='invitationLable'>Invitation B</h6>
-        <a href="{{ url_for('edit_sample', sample='invite2') }}"><img id="invitation" src="static/img/invite2.png"></a>
+    <div class="row">
+        <!-- Column 1 -->
+        <div class="col-md-4">
+            <figure>
+                <figcaption class="invitationLable">Business Card A - Back</figcaption>
+                <a href="{{ url_for('publish_sample', sample='buscard-a-back') }}"><img id="invitation" src="static/img/buscard-a-back.png"></a>
+            </figure>
+        </div>
     </div>
 
-    <!-- Column 3 -->
-    <div class="col-md-4">
-        <h6 class='invitationLable'>Business Card A - Front</h6>
-        <a href="{{ url_for('edit_sample', sample='buscard-a-front') }}"><img id="invitation" src="static/img/buscard-a-front.png"></a>
-    </div>
+
 {% endblock %}
