@@ -34,18 +34,17 @@ $(document).ready(function() {
 		showInfoDialog();
 	});
 
-    // Dynamisches Skalieren von Schriften
-    fontSize = function() {
-        //ww = $(window).innerWidth();
-        ww = $('#formContainer').innerWidth(); // Width of the Motherelement
-        console.log("formContainer innerWidth = " + ww);
-        one = ww/100; // 1%
-        console.log("one = " + one);
-        multiplcator = one*31; 
-        console.log("font size = " + multiplcator);
-        $('.mainhead').css({'font-size': multiplcator+'px'});
-    }
-    fontSize();
+    $("#publishbutton").click(function() {
+        var target = $('#invitationContainer');
+        html2canvas(target, {
+            onrendered: function(canvas) {
+                var data = canvas.toDataURL();
+                alert(data);
+                document.body.innerHTML="<br/><br/><br/><br/><br/><br/><img src="+data+" />";
+            }
+        });
+        console.log("The Publish button was clicked");
+    });
 
     $("input.date").datepicker({
         format: "DD, MM d",
