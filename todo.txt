@@ -26,10 +26,20 @@ Implement the "save" button in the form page - DONE
 Implement the "edit" button in the final page - DONE
  * Go back to the form page, with the form data filled in - DONE
  * Let user edit form, and then save again - DONE
-Implement the "publish" button - DONE
- * Grab the doterra sample from the screen into an image
- * Emails the final page to the user (from javascript on the client, not the server)
-   - Look at Flask Mega-Tutorial lesson called "Email Support" and use Flask-Mail
+Implement the "publish" button - REMOVED
+ UPDATE: I did not know how to do this. Grabbing the screen is not allowed in
+         web browsers. There is a tool called html2canvas.js that will try to
+         scan the DOM and re-render the HTML into an HTML5 canvas element. The idea
+         being that once the canvas is built, then an image of the canvas can be made,
+         and then allowing the image to be sent to the user. But alas, the tool just
+         couldn't handle all of the bootstrap and various details in the HTML/DOM. This
+         is a difficult job, and is really just re-creating what the browser does
+         (render HTML markup into a web page), except html2canvas is trying to render
+         into a canvas element. There is no way this would ever be accomplished without
+         formal standards and implementation by browsers.
+ * Grab the doterra sample from the screen into an image - NOT DONE
+ * Emails the final page to the user (from javascript on the client, not the * server) - NOT DONE
+   - Look at Flask Mega-Tutorial lesson called "Email Support" and use Flask-Mail - NOT DONE
 
 ### Show Charlie, and see if I should go ahead and make this my MVP project.
   - if not, then get started on the code snippet project.
@@ -46,6 +56,8 @@ Create signup page
 Create "account" page
   * create account form
   * allow account info to be changed
+  * allow administration control (disable accounts, disable account creation
+    by users - only allow signup by admin, only supply account login/changes)
 Create login page
   * create login form
   * get user data from database, and compare passwords, and if they compare, log them in

@@ -14,7 +14,7 @@ $(document).ready(function() {
 		vex.open({
 			contentClassName: 'infoDialog',
 			content: 
-                '<h3>Help for Pam\'s invitation builder</h3>' +
+                '<h3>Help</h3>' +
                 '<ol>' +
                 '<li>Click the "Samples" link and choose a sample invitation or business card' +
                 '<li>Fill in the form on the edit page' +
