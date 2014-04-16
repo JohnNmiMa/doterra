@@ -14,18 +14,24 @@ $(document).ready(function() {
 		vex.open({
 			contentClassName: 'infoDialog',
 			content: 
-				'<h2>Purpose</h2>' +
-                '<p>This example show how to code up Flask-WTF forms.' +
-                '   The form is created in a Flask-WTF Form which is presented' +
-                '   to the user in the Sign Up page by rendering a Jinja2 template.' +
-                '   All form validation is done by the Flask-WTF Form using the built in' +
-                '   form validators. Some fields are required (email, password, first name)' +
-                '   while others are optional. If a required field is empty or if some' +
-                '   other validator fails, the reason for the failure is shown above the' +
-                '   form, so the user can easily understand what to correct.</p></br>' +
-                '<p>This example is the third in a series of Web Form examples. It is here' +
-                '   to show how easily and quickly a full-featured validating Web Form' +
-                '   can be built using Flask-WTF.</p>',
+                '<h3>Help for Pam\'s invitation builder</h3>' +
+                '<ol>' +
+                '<li>Click the "Samples" link and choose a sample invitation or business card' +
+                '<li>Fill in the form on the edit page' +
+                '<li>When the form is complete, click the "Save" button' +
+                '<li>To make changes, click the "Edit" button and make the changes' +
+                '<li>Once the invitation is correct, screenshot the invitation' +
+                '    <ul>' +
+                '    <li>On Mac OS X, type "Shift+Command+4"' +
+                '    <li>On Windows:' +
+                '        <ol>' +
+                '        <li>select the browser window displaying the invitation' +
+                '        <li>type "Alt + PrtScn"' +
+                '        </ol>' +
+                '    </ul>' +
+                '<li>Edit the screenshot image if needed, then print or email to class attendees' +
+                '<li>Contact Pam to have other invitations added to the list of samples' +
+                '</ol>',
 			overlayClassName:'infoDialogOverlay',
 			showCloseButton:false});
 	}
