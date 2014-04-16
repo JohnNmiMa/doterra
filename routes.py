@@ -2,7 +2,7 @@
 import pdb
 import pickle
 from flask import Flask, redirect, url_for, request, render_template, flash
-from form import InviteForm
+#from form import InviteForm
 
 app = Flask(__name__)      
 app.config.from_object('config')
