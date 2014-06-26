@@ -24,14 +24,14 @@ def edit_sample(sample):
         # Remote "Wellness Advocate" from the form['welladv'] field
         form['welladv'] = form['welladv'].split('#')[1]
 
-    return render_template('edit_sample.html', page=path, sample=sample, formdata=form)
+    return render_template('sample.html', page=path, sample=sample, formdata=form)
 
 @app.route('/publish_sample/<path:sample>', methods = ['GET', 'POST'])
 def publish_sample(sample):
     #pdb.set_trace()
     path = request.path.split('/')[1]
     #print('path = {}').format(path)
-    return render_template('publish_sample.html',  page=path, sample=sample, formdata=request.form)
+    return render_template('sample.html',  page=path, sample=sample, formdata=request.form)
 
  
 if __name__ == '__main__':

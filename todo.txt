@@ -68,31 +68,32 @@ Create login page
 PHASE 3
   * be able to use Flask-WTF forms, which are more secure
 
------------------
-Architecture
 
-layout.html -- top level HTML
-* Index page
-  - sample.html -- extends layout.html
-    - contains <a> refs to edit_{{sample}} - e.g. edit_invite1.html
- 
-    - edit_{{sample}}.html -- extends edit_sample.html
-      - contains <form> action to publish_{{sample}} - e.g. pubish_invite1.html
-
-      - publish_{{sample}}.html 
+### Architecture
 
 # Index page
 layout.html
-  - sample.html
+  - index.html
+    - contains <a> refs to edit_{{sample}} - e.g. edit_invite1.html
 
 # Edit page
 layout.html
-  - edit_sample.html
-    - edit_{{sample}}.html --> e.g.: edit_invite1.html
-      - includes {{sample}}.html --> e.g.: invite1.html
+  - sample.html
+    - {{sample}}.html --> e.g.: invite1.html
 
 # Publish page
-  - publish_sample.html
-    - publish_{{sample}} --> e.g.: publish_invite1.html
-      - includes {{sample}}.html --> e.g.: invite1.html
+  - sample.html
+    - {{sample}} --> e.g.: invite1.html
 
+
+### How to add an invitation.
+Easiest to clone a previous invitation
+1) copy templates/invite3.html templates/invite?.html
+   copy static/css/invite3.less static/css/invite?.less
+
+2) include the new static/css/invite?.less in static/css/main.less
+
+3) Edit the templates/invite?.html:
+   - Update the form to have the correct input elements
+   - Position the form on the page correctly
+   - other CSS fine tuning (color, font, size, etc.)
