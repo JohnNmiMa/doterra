@@ -7,8 +7,9 @@
         </div><br>
 
         <div id="invitationContainer">
-            {% block invitationForm %}
-            {% endblock %}
+            <form id="invitationForm" action="{{url_for('publish_sample', sample=sample)}}" method="post" name="invitationForm" role="form">
+                {% include sample + ".html" %}
+            </form>
 
             {% if sample == 'invite3' %}
                 <img id={{sample}} src="/static/img/{{sample}}.jpg">

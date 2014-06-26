@@ -68,3 +68,31 @@ Create login page
 PHASE 3
   * be able to use Flask-WTF forms, which are more secure
 
+-----------------
+Architecture
+
+layout.html -- top level HTML
+* Index page
+  - sample.html -- extends layout.html
+    - contains <a> refs to edit_{{sample}} - e.g. edit_invite1.html
+ 
+    - edit_{{sample}}.html -- extends edit_sample.html
+      - contains <form> action to publish_{{sample}} - e.g. pubish_invite1.html
+
+      - publish_{{sample}}.html 
+
+# Index page
+layout.html
+  - sample.html
+
+# Edit page
+layout.html
+  - edit_sample.html
+    - edit_{{sample}}.html --> e.g.: edit_invite1.html
+      - includes {{sample}}.html --> e.g.: invite1.html
+
+# Publish page
+  - publish_sample.html
+    - publish_{{sample}} --> e.g.: publish_invite1.html
+      - includes {{sample}}.html --> e.g.: invite1.html
+
