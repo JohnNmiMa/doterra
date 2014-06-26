@@ -1,0 +1,98 @@
+<div id="invite3FormContainer">
+
+    {% if page == 'edit_sample' %}
+        {% set border = 'border' %}
+
+        {% set dateph = 'placeholder="Class date"'|safe %}
+        {% set timeph = 'placeholder="time"'|safe %}
+        {% set addressph = 'placeholder="Address"'|safe %}
+        {% set citystatezipph = 'placeholder="City, State  Zip"'|safe %}
+        {% set personph = 'placeholder="Name"'|safe %}
+        {% set phoneph = 'placeholder="Phone #"'|safe %}
+        {% set emailph = 'placeholder="Email"'|safe %}
+    {% elif page == 'publish_sample' %}
+        {% set doreadonly = 'readonly' %}
+        {% set border = 'noborder' %}
+
+        {% set dateph = '' %}
+        {% set timeph = '' %}
+        {% set addressph = '' %}
+        {% set citystatezipph = '' %}
+        {% set personph = '' %}
+        {% set phoneph = '' %}
+        {% set emailph = '' %}
+    {% endif %}
+
+    {% if formdata %}
+        {% if formdata['date'] %}
+            {% set datevalue = formdata['date'] %}
+        {% endif %}
+
+        {% if formdata['fromtime'] %}
+            {% set fromtimevalue = formdata['fromtime'] %}
+        {% endif %}
+        {% if formdata['totime'] %}
+            {% set totimevalue = formdata['totime'] %}
+        {% endif %}
+
+        {% if formdata['address'] %}
+            {% set addressvalue = formdata['address'] %}
+        {% endif %}
+
+        {% if formdata['citystatezip'] %}
+            {% set citystatezipvalue = formdata['citystatezip'] %}
+        {% endif %}
+
+        {% if formdata['person'] %}
+            {% set personvalue = formdata['person'] %}
+        {% endif %}
+
+        {% if formdata['phone'] %}
+            {% set phonevalue = formdata['phone'] %}
+        {% endif %}
+
+        {% if formdata['email'] %}
+            {% set emailvalue = formdata['email'] %}
+        {% endif %}
+    {% endif %}
+
+
+    <fieldset {{ifdisabled}}>
+        <div class="row col-sm-12">
+            <input type="text" name='date' value='{{datevalue}}'
+                class="form-control date {{sample}} {{border}}" {{dateph}} {{doreadonly}}>
+        </div>
+        <div class="row">
+            <div class="col-xs-6 fromtime">
+                <div class="input-group input-group-sm">
+                    <span class="input-group-addon fromtime {{border}}">Start:</span>
+                    <input type="text" name='fromtime' value='{{fromtimevalue}}' id="fromtime"
+                        class="form-control fromtime {{sample}} {{border}}" {{timeph}} {{doreadonly}}>
+                </div>
+            </div>
+            <div class="col-xs-5 totime">
+                <div class="input-group input-group-sm">
+                    <span class="input-group-addon totime {{border}}">End:</span>
+                    <input type="text" name='totime' value='{{totimevalue}}' id="totime"
+                        class="form-control totime {{sample}} {{border}}" {{timeph}} {{doreadonly}}>
+                </div>
+            </div>
+        </div>
+        <div class="row col-sm-12">
+            <input type="text" name='address' value='{{addressvalue}}'
+                class="form-control address {{sample}} {{border}}" {{addressph}} {{doreadonly}}>
+        </div>
+        <div class="row col-sm-12">
+            <input type="text" name='citystatezip' value='{{citystatezipvalue}}' 
+                class="form-control citystatezip {{sample}} {{border}}" {{citystatezipph}} {{doreadonly}}>
+        </div>
+        <div class="row col-sm-12">
+            <input type="text" name='person' value='{{personvalue}}'
+                class="form-control input-sm person {{sample}} {{border}}" {{personph}} {{doreadonly}}>
+            <input type="tel" name='phone' value='{{phonevalue}}'
+                class="form-control  input-sm phone {{sample}} {{border}}" {{phoneph}} {{doreadonly}}>
+            <input type="email" name='email' value='{{emailvalue}}'
+                class="form-control  input-sm email {{sample}} {{border}}" {{emailph}} {{doreadonly}}>
+        </div>
+    </fieldset>
+</div>
